@@ -41,7 +41,10 @@ class _SignInState extends State<SignIn> {
                 children: [
                   Text(
                     "Sign In",
-                    style: GoogleFonts.poppins(fontSize: 20),
+                    style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
@@ -49,11 +52,24 @@ class _SignInState extends State<SignIn> {
                 height: 10,
               ),
               TextField(
+                enabled: true,
                 decoration: InputDecoration(
+                  enabled: true,
+                  filled: true,
                   labelText: "Email",
                   labelStyle: GoogleFonts.poppins(),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
+                    borderSide: const BorderSide(
+                      color: Colors.black,
+                      width: 30,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: const BorderSide(
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),
@@ -61,11 +77,24 @@ class _SignInState extends State<SignIn> {
                 height: 20,
               ),
               TextField(
+                enabled: true,
                 decoration: InputDecoration(
+                  enabled: true,
+                  filled: true,
                   labelText: "Password",
                   labelStyle: GoogleFonts.poppins(),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
+                    borderSide: const BorderSide(
+                      color: Colors.black,
+                      width: 30,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: const BorderSide(
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),
