@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ridebuddy/Model/Widget/AppBar/appbar.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -13,9 +12,25 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(50),
-        child: RideBuddyAppBar(),
+      appBar: AppBar(
+        leading: const SizedBox(),
+        centerTitle: true,
+        title: Text.rich(
+          style: GoogleFonts.philosopher(
+            fontWeight: FontWeight.w700,
+          ),
+          const TextSpan(
+            children: [
+              TextSpan(text: "Ride"),
+              TextSpan(
+                text: "Buddy",
+                style: TextStyle(
+                  color: Colors.orange,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),

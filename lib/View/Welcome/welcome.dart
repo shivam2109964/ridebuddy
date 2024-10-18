@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ridebuddy/View/Auth/SignIn/signIn.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -81,7 +82,14 @@ class Welcome extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.large(
         backgroundColor: Colors.orange,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const SignIn(),
+            ),
+          );
+        },
         child: const Icon(
           Icons.start,
           color: Colors.white,
