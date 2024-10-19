@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ridebuddy/View-Model/BottomNavigation/botton_nav_bloc.dart';
 import 'package:ridebuddy/View-Model/SignIn/sign_in_bloc.dart';
 import 'package:ridebuddy/View-Model/SignUp/sign_up_bloc.dart';
 import 'package:ridebuddy/View/Welcome/welcome.dart';
@@ -17,6 +18,9 @@ class MainApp extends StatelessWidget {
         BlocProvider(
           create: (context) => SignInBloc(),
         ),
+        BlocProvider(
+          create: (context) => BottonNavBloc(),
+        )
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
