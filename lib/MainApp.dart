@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ridebuddy/View-Model/SignUp/sign_up_bloc.dart';
 import 'package:ridebuddy/View/Welcome/welcome.dart';
 
 class MainApp extends StatelessWidget {
@@ -6,12 +8,19 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => SignUpBloc(),
+        )
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          useMaterial3: true,
+        ),
+        home: const Welcome(),
       ),
-      home: const Welcome(),
     );
   }
 }
