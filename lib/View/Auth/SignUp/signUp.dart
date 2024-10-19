@@ -49,7 +49,7 @@ class _SignUpState extends State<SignUp> {
               child: CircularProgressIndicator(),
             );
           } else if (state is SignUpLoadedState) {
-            Navigator.push(
+            Navigator.pushReplacement(
               context,
               MaterialPageRoute(
                 builder: (context) => const Home(),
@@ -176,6 +176,9 @@ class _SignUpState extends State<SignUp> {
                               ),
                             );
                           }
+                          emailEditingController.clear();
+                          passwordEditingController.clear();
+                          confirmEditingController.clear();
                         },
                         child: Container(
                           height: MediaQuery.of(context).size.height * 0.07,

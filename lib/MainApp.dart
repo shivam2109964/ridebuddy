@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ridebuddy/View-Model/SignIn/sign_in_bloc.dart';
 import 'package:ridebuddy/View-Model/SignUp/sign_up_bloc.dart';
 import 'package:ridebuddy/View/Welcome/welcome.dart';
 
@@ -12,7 +13,10 @@ class MainApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => SignUpBloc(),
-        )
+        ),
+        BlocProvider(
+          create: (context) => SignInBloc(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
