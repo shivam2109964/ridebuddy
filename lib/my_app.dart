@@ -4,6 +4,7 @@ import 'package:ridebuddy/view/welcome_page/welcome_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ridebuddy/view_model/auth/sign_in/sign_in_bloc.dart';
 import 'package:ridebuddy/view_model/auth/sign_up/signup_bloc.dart';
+import 'package:ridebuddy/view_model/bottom_nav/bottom_nav_bloc.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => SignInBloc(),
+        ),
+        BlocProvider(
+          create: (context) => BottomNavBloc(),
         ),
       ],
       child: MaterialApp(
