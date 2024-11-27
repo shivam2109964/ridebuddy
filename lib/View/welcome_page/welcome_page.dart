@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ridebuddy/View/Auth/SignIn/signIn.dart';
+import 'package:ridebuddy/model/constant/fonts.dart';
+import 'package:ridebuddy/view/auth/sign_in/sign_in.dart';
 
 class Welcome extends StatelessWidget {
+  static const String routeName = '/Welcome-page';
   const Welcome({super.key});
 
   @override
@@ -15,10 +17,10 @@ class Welcome extends StatelessWidget {
               quarterTurns: 3,
               child: Text(
                 "Make Trip Ride Buddy",
-                style: GoogleFonts.abyssinicaSil(
+                style: AppFonts.abyssinicaSilFonts(
                   fontWeight: FontWeight.bold,
-                  fontSize: 140,
                   color: Colors.black12,
+                  size: 140,
                 ),
               ),
             ),
@@ -83,12 +85,7 @@ class Welcome extends StatelessWidget {
       floatingActionButton: FloatingActionButton.large(
         backgroundColor: Colors.orange,
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const SignIn(),
-            ),
-          );
+          Navigator.pushNamed(context, SignIn.routeNamed);
         },
         child: const Icon(
           Icons.start,

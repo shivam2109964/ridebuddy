@@ -6,9 +6,9 @@ final class SignInInitial extends SignInState {}
 
 class SignInLoadingState extends SignInState {}
 
-class SignInLoadedState extends SignInState {}
+class SignInDoneState extends SignInState {}
 
-class SignInError extends SignInState {
+class SignInErrorState extends SignInState {
   String message;
-  SignInError(this.message);
+  SignInErrorState(this.message);
 }
