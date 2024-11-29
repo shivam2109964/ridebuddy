@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ridebuddy/view/home/screen/home.dart';
 import 'package:ridebuddy/view_model/bottom_nav/bottom_nav_bloc.dart';
 
 class Home extends StatelessWidget {
@@ -12,9 +13,7 @@ class Home extends StatelessWidget {
       body: BlocBuilder<BottomNavBloc, int>(
         builder: (context, index) {
           if (index == 0) {
-            return const Center(
-              child: Text("Home page"),
-            );
+            return const HomeScreen();
           } else if (index == 1) {
             return const Center(
               child: Text("Network page"),
