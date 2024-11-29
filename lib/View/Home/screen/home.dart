@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String routeNamed = 'Home-Screen';
@@ -27,13 +28,20 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.grey.shade200,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                  ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.1,
-                    width: MediaQuery.of(context).size.width * 0.35,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade200,
-                      borderRadius: BorderRadius.circular(10),
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset(
+                            "assets/fastDel.png",
+                            height: 40,
+                          ),
+                          Text(
+                            "New Order",
+                            style: GoogleFonts.exo2(),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Container(
@@ -43,6 +51,21 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.grey.shade200,
                       borderRadius: BorderRadius.circular(10),
                     ),
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset(
+                            "assets/fastTag.png",
+                            height: 40,
+                          ),
+                          Text(
+                            "FastTag",
+                            style: GoogleFonts.exo2(),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                   Container(
                     height: MediaQuery.of(context).size.height * 0.1,
@@ -50,6 +73,44 @@ class HomeScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.grey.shade200,
                       borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset(
+                            "assets/gps.png",
+                            height: 40,
+                          ),
+                          Text(
+                            "GPS",
+                            style: GoogleFonts.exo2(),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.1,
+                    width: MediaQuery.of(context).size.width * 0.35,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade200,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.asset(
+                            "assets/package.png",
+                            height: 40,
+                          ),
+                          Text(
+                            "Finds Loads",
+                            style: GoogleFonts.exo2(),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ],
